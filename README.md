@@ -20,4 +20,4 @@ This repository holds the Problems (whicha are hard for me) and Solutions in Typ
 
 |Problem Id|Problem Description|
 |:--------:|-------------------|
-|P01| How many different ways, are there to represent a number "n" as addition of "k" numbers (0 <= k <= n)? |
+|P01| In how many different ways can "n" be represented as a sum of "k" numbers?|
