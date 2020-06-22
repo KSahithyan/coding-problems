@@ -1,19 +1,22 @@
 import Solution, { factorial } from './Solution.ts';
 
-const TESTS: { input: { subjectCount: number, resultLetterCount: number }, output: number }[] = [
-    { input: { subjectCount: 0, resultLetterCount: 0}, output: 0 },
-    { input: { subjectCount: 1, resultLetterCount: 0}, output: 0 },
-    { input: { subjectCount: 0, resultLetterCount: 1}, output: 0 },
+const TESTS: { input: { n: number, k: number }, output: number }[] = [
+    { input: { n: 0, k: 0}, output: 0 },
+    { input: { n: 1, k: 0}, output: 0 },
+    { input: { n: 0, k: 1}, output: 0 },
 
-    { input: { subjectCount: 1, resultLetterCount: 1}, output: 1 },
-    { input: { subjectCount: 1, resultLetterCount: 2}, output: 2 },
-    { input: { subjectCount: 1, resultLetterCount: 3}, output: 3 },
-    { input: { subjectCount: 1, resultLetterCount: 4}, output: 4 },
+    { input: { n: 2, k: 2 }, output: 3 },
+    { input: { n: 2, k: 3 }, output: 6 },
+
+    { input: { n: 1, k: 1}, output: 1 },
+    { input: { n: 1, k: 2}, output: 2 },
+    { input: { n: 1, k: 3}, output: 3 },
+    { input: { n: 1, k: 4}, output: 4 },
     
-    { input: { subjectCount: 2, resultLetterCount: 1 }, output: 1 },
-    { input: { subjectCount: 2, resultLetterCount: 2}, output: 3 },
+    { input: { n: 2, k: 1 }, output: 1 },
+    { input: { n: 2, k: 2}, output: 3 },
     // Original Question
-    { input: { subjectCount: 9, resultLetterCount: 5}, output: 715 }
+    { input: { n: 9, k: 5}, output: 715 }
 ]
 
 const FACTORIAL_TESTING: { input: number, output: number }[] = [
@@ -24,6 +27,7 @@ const FACTORIAL_TESTING: { input: number, output: number }[] = [
     { input: 4, output: 24 },
     { input: 5, output: 120 }
 ]
+
 // Testing factorial function
 for (let test of FACTORIAL_TESTING) {
     Deno.test(`Testing input ${test.input}`, () => {
@@ -37,8 +41,8 @@ for (let test of FACTORIAL_TESTING) {
 // Testing Solution
 for (let test of TESTS) {
     Deno.test(`Testing inputs ${Object.values(test.input).join(',')}`, () => {
-        const { subjectCount, resultLetterCount } = test.input;
-        let output = Solution(subjectCount, resultLetterCount);
+        const { n, k } = test.input;
+        let output = Solution(n, k);
         if (output != test.output) {
             throw `Solution(${Object.values(test.input).join(',')}) expected to be ${test.output} not ${output}`
         }
