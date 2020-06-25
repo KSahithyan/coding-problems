@@ -20,4 +20,4 @@ This repository holds the Problems (whicha are hard for me) and Solutions in Typ
 
 |Problem Id|Problem Description|
 |:--------:|-------------------|
-|P01| In how many different ways can "n" be represented as a sum of "k" numbers?|
+|P01| In how many different ways can "n" be represented as a sum of "k" numbers from the range (0, n)?|
