@@ -21,3 +21,7 @@ This repository holds the Problems (whicha are hard for me) and Solutions in Typ
 |Problem Id|Problem Description|
 |:--------:|-------------------|
 |P01| In how many different ways can "n" be represented as a sum of "k" numbers?|
+|P02*| Write a function to factorize polynomials (which has only Real number factors) |
+
+
+**Note: Starred problems are not finished yet.**
